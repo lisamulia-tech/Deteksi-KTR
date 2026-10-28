@@ -41,13 +41,17 @@ The system integrates object detection, location-based observation data, and Web
 - OpenStreetMap
 - Geographic Information System (GIS)
 
-## 6. Research Contributions
+## 6. Research Ownership and Contributions
 
-**Research Initiator and Project Lead:** Lisa Mulia
+**Research Initiator and Project Lead: Lisa Mulia**
 
-The project was developed as part of academic research. Research activities include defining research objectives, preparing research data, conducting field observations, establishing evaluation criteria, analyzing detection results, performing spatial analysis, and preparing the thesis and supporting documentation.
+This project originated from my academic research on Smoke-Free Area (KTR) compliance mapping using YOLOv11 object detection and spatial analysis.
 
-Software implementation was developed with assistance from a programmer based on the research requirements.
+My contributions include defining the research objectives, developing the research methodology, specifying system requirements, collecting and preparing research data, conducting field observations, performing spatial analysis, evaluating research findings, and authoring the thesis and supporting documentation.
+
+Software implementation was commissioned and developed with programmer assistance based on the research requirements.
+
+This repository documents the research project, its development process, and my academic contributions.
 
 ## 7. Project Status
 
