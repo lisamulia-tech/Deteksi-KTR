@@ -1,151 +1,68 @@
-# 🚬 Monitoring Pelanggaran Merokok - Web App
+# 🚭 Deteksi KTR — YOLOv11 and WebGIS
 
-Aplikasi web sederhana untuk monitoring pelanggaran merokok berbasis peta menggunakan Leaflet.js dan OpenStreetMap.
+## 1. Project Overview
 
-## 🌟 Fitur Utama
+This project is an academic research prototype developed to support the mapping and classification of Smoke-Free Area (*Kawasan Tanpa Rokok/KTR*) compliance using YOLOv11 object detection and spatial analysis of environmental images.
 
-### A. Form Input Data
-- ✅ Nama lokasi (text input)
-- ✅ Kategori pelanggaran (dropdown):
-  - Patuh
-  - Pelanggaran Ringan (ada puntung rokok)
-  - Pelanggaran Berat (orang merokok)
-- ✅ Upload foto
-- ✅ Latitude & Longitude (otomatis dari klik map)
-- ✅ Tombol "Simpan Data"
+The system integrates object detection, location-based observation data, and WebGIS visualization to support the identification and analysis of potential KTR violations in Lhokseumawe, Aceh, Indonesia.
 
-### B. Peta Interaktif
-- ✅ Tampilan peta penuh (full width)
-- ✅ Klik peta → otomatis isi latitude & longitude
-- ✅ Setelah disimpan → marker muncul di lokasi
+## 2. Research Title
 
-### C. Warna Marker
-- 🟢 Hijau → Patuh
-- 🟡 Kuning → Pelanggaran Ringan
-- 🔴 Merah → Pelanggaran Berat
+**Pemetaan dan Klasifikasi Kepatuhan Kawasan Tanpa Rokok (KTR) Menggunakan Deteksi Objek YOLOv11 dan Analisis Spasial pada Citra Lingkungan**
 
-### D. Popup Marker
-- Nama lokasi
-- Kategori
-- Foto (preview)
-- Koordinat
-- Tombol hapus
+## 3. Research Objectives
 
-### E. Fitur Tambahan
-- ✅ Statistik jumlah pelanggaran
-- ✅ Filter berdasarkan kategori
-- ✅ Heatmap layer untuk pelanggaran berat
-- ✅ Fungsi hapus marker individual
-- ✅ Fungsi clear all data
-- ✅ Validasi form sebelum simpan
-- ✅ Data tersimpan di localStorage (tidak hilang saat refresh)
+- Detect smoking-related objects in environmental images.
+- Identify potential KTR violations using object detection.
+- Classify observation points based on the research compliance criteria.
+- Visualize observation locations and compliance status through WebGIS.
+- Support spatial analysis to identify areas with potential KTR violations.
 
-## 🛠️ Teknologi
+## 4. Main Features
 
-- **HTML5** - Struktur halaman
-- **CSS3** - Styling modern minimalis & responsive
-- **Vanilla JavaScript** - Logika aplikasi
-- **Leaflet.js** - Library peta (gratis)
-- **OpenStreetMap** - Tile provider (gratis)
-- **Python** - HTTP Server untuk menjalankan aplikasi
+- **Object Detection:** Detects objects associated with smoking-related violations using YOLOv11.
+- **Image Upload:** Supports the submission of environmental images for analysis.
+- **Location Data:** Stores observation information and geographic coordinates when available.
+- **Compliance Classification:** Organizes observation results into compliance categories based on the research criteria.
+- **WebGIS Visualization:** Displays observation locations on an interactive map.
+- **Spatial Analysis:** Supports the analysis of geographic patterns and the distribution of potential violations.
 
-## 📁 Struktur File
+*The availability of individual features depends on the implemented application modules and the completeness of the observation data.*
 
-```
-Citra KTR Map/
-├── index.html      # Halaman utama
-├── style.css       # Styling CSS
-├── script.js       # Logika JavaScript
-├── server.py       # Python HTTP Server
-├── README.md       # Dokumentasi ini
-└── run.bat         # Jalankan di Windows
-```
+## 5. Technology Stack
 
-## 🚀 Cara Menjalankan
+- Python
+- YOLOv11 and Ultralytics
+- PyTorch
+- Flask
+- HTML5 and CSS3
+- JavaScript
+- Leaflet.js
+- OpenStreetMap
+- Geographic Information System (GIS)
 
-### Cara 1: Menggunakan Python (Disarankan)
+## 6. Research Contributions
 
-1. Pastikan Python sudah terinstall
-2. Buka terminal/command prompt
-3. Jalankan perintah:
-   ```bash
-   python server.py
-   ```
-4. Browser akan otomatis terbuka
+**Research Initiator and Project Lead:** Lisa Mulia
 
-### Cara 2: Menggunakan run.bat (Windows)
+The project was developed as part of academic research. Research activities include defining research objectives, preparing research data, conducting field observations, establishing evaluation criteria, analyzing detection results, performing spatial analysis, and preparing the thesis and supporting documentation.
 
-1. Klik dua kali file `run.bat`
-2. Browser akan otomatis terbuka
+Software implementation was developed with assistance from a programmer based on the research requirements.
 
-### Cara 3: Manual
+## 7. Project Status
 
-1. Buka terminal di folder ini
-2. Jalankan:
-   ```bash
-   python -m http.server 8000
-   ```
-3. Buka browser: http://localhost:8000
+Academic research prototype for KTR compliance mapping and spatial analysis.
 
-## 📱 Responsivitas
+This repository contains selected application source files, model files, configuration, and documentation. Additional datasets, dependencies, or configuration may be required to reproduce the complete application.
 
-- **Desktop**: Form di kiri, peta di kanan
-- **Mobile**: Form dan peta bertumpuk vertikal
+## 8. Acknowledgment
 
-## 💾 Penyimpanan Data
+Software development contributions should be acknowledged in accordance with the applicable agreement and contributor consent.
 
-Data disimpan di `localStorage` browser, sehingga:
-- Data tidak hilang saat halaman di-refresh
-- Data tersimpan per browser yang digunakan
+## 9. License and Usage
 
-## 🎨 Desain
-
-- Modern minimalis
-- Warna: Biru utama (#2563eb)
-- Responsive design
-- Clean UI dengan ikon Font Awesome
-
-## 📝 Cara Penggunaan
-
-1. **Input Data**:
-   - Isi nama lokasi
-   - Pilih kategori pelanggaran
-   - Upload foto (opsional)
-   - Klik pada peta untuk memilih lokasi
-   - Klik "Simpan Data"
-
-2. **Melihat Marker**:
-   - Marker akan muncul di peta sesuai lokasi
-   - Klik marker untuk melihat detail
-
-3. **Filter**:
-   - Klik tombol filter untuk menampilkan kategori tertentu
-
-4. **Heatmap**:
-   - Aktifkan toggle heatmap untuk melihat konsentrasi pelanggaran berat
-
-5. **Hapus Data**:
-   - Klik tombol hapus pada popup marker
-   - Atau klik "Hapus Semua Data" untuk menghapus semua
-
-## 🔧 Troubleshooting
-
-### Peta tidak muncul?
-- Pastikan koneksi internet aktif
-- Pastikan port 8000 tidak digunakan aplikasi lain
-
-### Foto tidak tersimpan?
-- localStorage memiliki batas ukuran
-- Coba gunakan foto dengan ukuran lebih kecil
-
-### Marker tidak muncul?
-- Periksa apakah JavaScript diizinkan
-- Cek console browser untuk error
-
-## 📄 Lisensi
-
-Open Source - Gratis untuk digunakan
+No open-source license has been specified. Permission for reuse, modification, and redistribution should be clarified with the relevant rights holders before the project is distributed or reused.
 
 ---
 
-Dibuat dengan ❤️ untuk monitoring pelanggaran merokok
+**Research Portfolio — Lisa Mulia**
